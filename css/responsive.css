@@ -53,7 +53,7 @@
 
 @media (min-width: 576px) and (max-width: 767px) {
     .head_top {
-        background: #0891f8;
+        background: #000;
     }
     .mean-container .mean-bar {
         margin-top: 0px;
@@ -71,7 +71,7 @@
         margin: 0;
     }
     .Testimonial {
-        background: #0891f8;
+        background: #000;
     }
     .Testimonial_box {
         padding: 20px;
@@ -105,6 +105,10 @@
         padding: 10px 0;
         color: #000;
     }
+    .navigation.navbar-dark  {
+        background-color: #000 !important;
+        padding: 10px 0;
+    }
     .navigation.navbar-dark .navbar-toggler {
         border: inherit;
         float: right;
@@ -124,7 +128,7 @@
 
 @media (max-width: 575px) {
     .head_top {
-        background: #0891f8;
+        background: #000;
     }
     .header {
         padding: 12px 0px 0px 0px;
