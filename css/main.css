@@ -281,6 +281,14 @@ button {
      padding-top: 12px;
 }
 
+#blacken {
+     color: #fff !important;
+}
+
+#blacken:hover {
+     color: #0891f8 !important;
+ }
+
 .navigation.navbar-dark .navbar-nav .nav-link {
      padding: 0 25px;
      color: #fff;
@@ -291,7 +299,7 @@ button {
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
-     color: #000;
+     color: #fff;
 }
 
 .navigation.navbar-dark .navbar-nav .active>.nav-link,

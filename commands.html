@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commands</title>
     <link rel="stylesheet" href="css/commands.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link
@@ -132,7 +132,7 @@
 
           <a class="section" href="#information"><i class="fa fa-info-circle" aria-hidden="true"></i> Информация</a>
           <a class="section" href="#moderation"><i class="fa fa-shield" aria-hidden="true"></i> Модерация </a>
-          <a class="section" href="#nsfw">NSFW</a>
+          <a class="section" href="#economics"><i class="fa-solid fa-coins"></i> Экономика </a>
           <a class="sub-section" href="#nsfwTags">Tags</a>
           <a class="sub-section" href="#autoNSFW">Auto NSFW</a>
           <a class="section" href="#config">Config</a>
@@ -209,7 +209,7 @@
               <div class="cmdCollapse">
                 Выдаёт пользователю наказание в виде timeout на указанное количество времени, подробнее про Timeout'ы:<br> <a href="https://support.discord.com/hc/ru/articles/4413305239191-Time-Out-FAQ">Гайд дискорда</a>
                 <br>
-                <b>Использование :</b> <span class="codeBlock">/mute &lt;время&gt; [причина]</span>
+                <b>Использование :</b> <span class="codeBlock">/mute &lt;@Пользователь&gt; &lt;время&gt; [причина]</span>
                 <br>
                 <b>Примеры :</b><br> <span class="codeBlock">/mute @Clonexy2362 13m</span>
                 <br>
@@ -219,86 +219,191 @@
                 <br>
                 <b>Примечания :</b> <i class="fa fa-shield" aria-hidden="true"></i> Для использования команды нужны модераторские права: <b>moderate_members</b> (возможность выдавать timeout) <br> Бот должен иметь как минимум аналогичные права
               </span></div>
-              <li class="collapsible"><span class="codeBlock">/ping</span> — Задержка бота в данный момент</li>
+              <li class="collapsible"><span class="codeBlock">/unmute</span> — Снять ограничение чата</li>
               <div class="cmdCollapse">
-                Description : Let's you search any manga with the help of Anilist API.
+                Снимает с пользователя временное ограничение чата путём установления параметра времени ограничения на None
                 <br>
-                Usage : <span class="codeBlock">dh manga < your manga > </span>
+                <b>Использование :</b> <span class="codeBlock">/unmute &lt;@Пользователь&gt; </span>
                 <br>
-                Example : <span class="codeBlock">dh manga death note</span>
+                <b>Пример :</b> <span class="codeBlock">/unmute @Clonexy2362</span>
                 <br>
-                Note : The manga name given can be case in-sensetive.
+                <b>Примечания :</b> <i class="fa fa-shield" aria-hidden="true"></i> Для использования команды нужны модераторские права: <b>moderate_members</b> (возможность выдавать timeout) <br> Бот должен иметь как минимум аналогичные права
               </div>
-              <li class="collapsible"><span class="codeBlock">/server</span>  — Информация о сервере</li>
+              <li class="collapsible"><span class="codeBlock">/mutes</span>  — Список активных мутов</li>
               <div class="cmdCollapse">
-                Description : Let's you search and read doujins from nhentai.net.
+                Отправляет список активных мутов на сервере с указанием времени мута для каждого пользователя
                 <br>
-                Usage : <span class="codeBlock">dh doujin < your code > </span>
+                <b>Использование :</b> <span class="codeBlock">/mutes</span>
                 <br>
-                Example : <span class="codeBlock">dh doujin 000000</span>
+                <b>Пример :</b> <span class="codeBlock">/mutes</span>
                 <br>
-                Aliases: <span class="codeBlock">search, id</span>
-                <br>
-                Note : By default doujins with tags which are against Discord TOS are not available through this command.
+                <b>Примечания :</b> —
               </div>
-              <li class="collapsible"><span class="codeBlock">/user</span>  — Информация о пользователе</li>
+              <li class="collapsible"><span class="codeBlock">/clear</span>  — Удаляет сообщения</li>
               <div class="cmdCollapse">
-                Description : Let's you search information about the characters listed in Anilist.
+                Удаляет сообщения в канале, в котором данная команда была использована, можно удалить до 1000 сообщений за раз
                 <br>
-                Usage : <span class="codeBlock">dh character < character name > </span>
+                <b>Использование :</b> <span class="codeBlock">/clear &lt;Количество сообщений&gt; [id сообщения удалить до которого] [id сообщения удалить после которого]</span>
                 <br>
-                Example : <span class="codeBlock">dh character light yagami</span>
+                <b>Примеры :</b><br> <span class="codeBlock">/clear 100</span>
                 <br>
-                Note : All the characters are not availabe only those ones at Anilist.co. So, if you want you can add it there.
+                <span class="codeBlock">/clear 150 1005047009486589992</span>
+                <br>
+                <span class="codeBlock">/clear 200 998843639524503644 1005427885957459979</span>
+                <br>
+                <b>Примечания :</b> Id сообщения можно получить нажав пкм по сообщению и копировать ID, если включен режим разработчика. <br> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
               </div>
-            </ul>
-          </div>
-        </div>
-        <div class="commandBlock">
-          <h2>Информация</h2>
-          <div>
-            <ul>
-              <li class="collapsible"><span class="codeBlock">/help</span> — Отправляет меню команд</li>
+              <li class="collapsible"><span class="codeBlock">/warn</span> — Выдать предупреждение</li>
               <div class="cmdCollapse">
-                Отправляет меню со всеми командами бота, разделёнными на категории
+                Выдаёт пользователю предупреждение с уникальным ID на вашем сервере</a>
                 <br>
-                <b>Использование :</b> <span class="codeBlock">/help</span>
+                <b>Использование :</b> <span class="codeBlock">/warn &lt;@Пользователь&gt; [причина]</span>
                 <br>
-                <b>Пример :</b> <span class="codeBlock">/help</span>
+                <b>Примеры :</b><br> <span class="codeBlock">/warn @Clonexy2362</span>
+                <br>
+                <span class="codeBlock">/warn @Clonexy2362 123</span>
+                <br>
+                <span class="codeBlock">/mute @Clonexy2362 Просто какая-то причина для варна, почему нет?</span>
+                <br>
+                <b>Примечания :</b> <i class="fa fa-shield" aria-hidden="true"></i> Для использования команды нужны модераторские права: <b>manage_messages</b> (возможность удалять сообщения)
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/unwarn</span> — Снять предупреждение</li>
+              <div class="cmdCollapse">
+                Снимает с пользователя предупреждение по уникальному ID на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/unwarn &lt;@Пользователь&gt; &lt;ID предупреждения&gt;</span>
+                <br>
+                <b>Пример :</b><br> <span class="codeBlock">/unwarn @Clonexy2362 880055535</span>
+                <br>
+                <b>Примечания :</b> <i class="fa fa-shield" aria-hidden="true"></i> Для использования команды нужны модераторские права: <b>manage_messages</b> (возможность удалять сообщения)
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/warns</span> — Список предупреждений пользователя</li>
+              <div class="cmdCollapse">
+                Отправляет список предупреждений с их ID и указанными причинами которые выдавались на вашем сервере указанному в параметрах команды пользователю
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/warns &lt;@Пользователь&gt;</span>
+                <br>
+                <b>Пример :</b><br> <span class="codeBlock">/warns @Clonexy2362</span>
                 <br>
                 <b>Примечания :</b> —
               </span></div>
-              <li class="collapsible"><span class="codeBlock">/ping</span> — Задержка бота в данный момент</li>
+              <li class="collapsible"><span class="codeBlock">/edit_warn</span> — Изменить предупреждение</li>
               <div class="cmdCollapse">
-                Description : Let's you search any manga with the help of Anilist API.
+                Изменяет указанное предупреждение по ID и его причину на новую, указанную в параметрах
                 <br>
-                Usage : <span class="codeBlock">dh manga < your manga > </span>
+                <b>Использование :</b> <span class="codeBlock">/edit_warn &lt;ID предупреждения&gt; &lt;новая причина&gt;</span>
                 <br>
-                Example : <span class="codeBlock">dh manga death note</span>
+                <b>Пример :</b><br> <span class="codeBlock">/edit_warn 880055535 Новая причина предупреждения</span>
                 <br>
-                Note : The manga name given can be case in-sensetive.
+                <b>Примечания :</b> <i class="fa fa-shield" aria-hidden="true"></i> Для использования команды нужны модераторские права: <b>manage_messages</b> (возможность удалять сообщения)
+              </span></div>
+            </ul>
+          </div>
+        </div>
+        <div id="economics" style="width:24%; margin:30px 0;"></div>
+        <div class="commandBlock">
+          <h2>Экономика</h2>
+          <div>
+            <ul>
+              <li class="collapsible"><span class="codeBlock">/balance</span> — Узнать баланс</li>
+              <div class="cmdCollapse">
+                Отправляет виртуальную карточку вашего баланса или баланса указанного в параметрах пользователя
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/balance [@Пользователь]</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/balance @Clonexy2362</span>
+                <br>
+                <b>Примечания :</b> —
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/add_money</span> — Добавить деньги</li>
+              <div class="cmdCollapse">
+                Добавляет указанному пользователю деньги на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/add_money &lt;@Пользователь&gt; &lt;деньги&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/add_money @Clonexy2362 1000</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
               </div>
-              <li class="collapsible"><span class="codeBlock">/server</span>  — Информация о сервере</li>
+              <li class="collapsible"><span class="codeBlock">/remove_money</span>  — Забрать деньги</li>
               <div class="cmdCollapse">
-                Description : Let's you search and read doujins from nhentai.net.
+                Забирает у указанного пользователя деньги на вашем сервере
                 <br>
-                Usage : <span class="codeBlock">dh doujin < your code > </span>
+                <b>Использование :</b> <span class="codeBlock">/remove_money &lt;@Пользователь&gt; &lt;деньги&gt;</span>
                 <br>
-                Example : <span class="codeBlock">dh doujin 000000</span>
+                <b>Пример :</b> <span class="codeBlock">/remove_money @Clonexy2362 1000</span>
                 <br>
-                Aliases: <span class="codeBlock">search, id</span>
-                <br>
-                Note : By default doujins with tags which are against Discord TOS are not available through this command.
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
               </div>
-              <li class="collapsible"><span class="codeBlock">/user</span>  — Информация о пользователе</li>
+              <li class="collapsible"><span class="codeBlock">/reset balance</span>  — Сбросить баланс</li>
               <div class="cmdCollapse">
-                Description : Let's you search information about the characters listed in Anilist.
+                Сбрасывает у указанного пользователя баланс до стандартно установленного на вашем сервере
                 <br>
-                Usage : <span class="codeBlock">dh character < character name > </span>
+                <b>Использование :</b> <span class="codeBlock">/reset balance &lt;@Пользователь&gt;</span>
                 <br>
-                Example : <span class="codeBlock">dh character light yagami</span>
+                <b>Пример :</b> <span class="codeBlock">/reset balance @Clonexy2362 1000</span>
                 <br>
-                Note : All the characters are not availabe only those ones at Anilist.co. So, if you want you can add it there.
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/reset economics</span>  — Сбросить экономику</li>
+              <div class="cmdCollapse">
+                Сбрасывает баланс всех пользователей на вашем сервере до стандартно установленного на вашем сервере значения
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/reset economics</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/reset economics</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/timely</span>  — Забрать денежную награду</li>
+              <div class="cmdCollapse">
+                Выдаёт пользователю установленную на сервере награду при использовании данной команды
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/timely</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/timely</span>
+                <br>
+                <b>Примечания :</b> Команду можно использовать раз в 3 часа
+              </div>
+              <li class="collapsible"><span class="codeBlock">/give</span>  — Передать валюту</li>
+              <div class="cmdCollapse">
+                Передаёт валюту с вашего баланса(снимает с него) на баланс указанного пользователя
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/give &lt;@Пользователь&gt; &lt;деньги&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/give @Clonexy2362 1000</span>
+                <br>
+                <b>Примечания :</b> —
+              </div>
+              <li class="collapsible"><span class="codeBlock">/add-shop</span>  — Добавить роль в магазин</li>
+              <div class="cmdCollapse">
+                Добавляет в магазин ролей на вашем сервере указанную роль
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/add-shop &lt;@Роль&gt; &lt;цена&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/add-shop @роль 5000</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/remove-shop</span>  — Убрать роль из магазина</li>
+              <div class="cmdCollapse">
+                Добавляет в магазин ролей на вашем сервере указанную роль
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/remove-shop &lt;@Роль&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/remove-shop @роль</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/shop</span>  — Магазин сервера</li>
+              <div class="cmdCollapse">
+                Позволяет посмотреть магазин ролей на сервере и купить роли
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/shop</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/shop</span>
+                <br>
+                <b>Примечания :</b> —
               </div>
             </ul>
           </div>

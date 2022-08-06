@@ -38,6 +38,8 @@
     .navigation.navbar-dark .navbar-nav .nav-link {
         padding: 0 14px;
     }
+
+
     .text-bg h1 {
         padding-top: 0px;
         font-size: 28px;
@@ -107,6 +109,15 @@
         padding: 2px 7px;
         border-radius: 15px;
     }
+
+    #blacken {
+        color: #000 !important;
+    }
+
+    #blacken:hover {
+        color: #0891f8 !important;
+    }
+
     .navigation.navbar-dark  {
         background-color: #000 !important;
         padding: 2px 7px;
@@ -212,10 +223,19 @@
         z-index: 999;
     }
     .navigation.navbar-dark .navbar-nav .nav-link {
-        color: #000;
+        color: #000 !important;
         padding: 2px 7px;
         border-radius: 15px;
     }
+
+    #blacken {
+        color: #000 !important;
+    }
+
+    #blacken:hover {
+        color: #0891f8 !important;
+    }
+
     .navigation.navbar-dark .navbar-toggler {
         float: right;
         margin-right: 2px;
