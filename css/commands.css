@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+    background-color: #f3f3f3 !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0E0E0F !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5865F2 !important;
+    border-radius: 100px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #202225 !important;
+}
+
+body {
+    animation: 1s ease-out 0s 1 fadein;
+}
+
+.row ul li::before {
+    list-style: none;
+}
+
+.row {
+    animation: pageShow .3s ease-in-out;
+}
+
+.wrapper {
+    align-items: left;
+    align-self: left;
+    align-content: left;
+    display: flex;
+    animation: pageShow .3s ease-in-out;
+}
+
+
+.sidepanel {
+    padding: 2px 7px;
+    background-color: #fff;
+    border-radius: 40px;
+    margin-top: 40px;
+    width: 300px;
+    padding: 20px;
+    overflow-x: hidden;
+    position: fixed;
+    height: 75vh;
+    animation: pageShow .3s ease-in-out;
+}
+
+.sidepanel::-webkit-scrollbar {
+    width: 4px;
+
+}
+
+.sidepanel a.title {
+    text-align: center;
+    display: block;
+    padding-bottom: 12px;
+
+    color: #fff;
+    background-color: #1D1E21;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidepanel a.section {
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+    display: block;
+    text-decoration: none;
+    color: #1D1E21;
+    padding: 2px 2px;
+    padding-left: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidepanel a.sub-section {
+    font-size: 16px;
+    text-align: left;
+    line-height: 30px;
+    display: block;
+    text-decoration: none;
+    color: #0F0F10;
+    padding: 2px 2px;
+    padding-left: 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+}
+
+.sidepanel a.title:hover,
+.sidepanel a.section:hover,
+.sidepanel a.sub-section:hover {
+    background-color: #1D1E21;
+    color: #eee;
+}
+
+.right-col {
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+    margin-left: 340px;
+    margin-right: 40px;
+}
+
+.right-col h1 {
+    color: #000;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+.right-col ul {
+    line-height: 28px;
+}
+
+.right-col h2 {
+    color: #000;
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-block-start: 20px;
+    margin-block-end: 10px;
+}
+
+.right-col p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 36px;
+}
+
+.right-col a {
+    color: #5865F2;
+    text-decoration: underline;
+}
+
+.right-col ol {
+    margin-block-start: 10px;
+}
+
+.col {
+    width: 50%;
+    float: left;
+}
+
+.top-info {
+    font-size: 17px;
+    text-align: center;
+
+}
+
+.divider {
+    width: 160px;
+    height: 4px;
+    background: #5865F2;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    animation: pageShow .3s ease-in-out;
+}
+
+.left {
+    margin: 20px 0;
+}
+
+
+.footer a {
+    color: #eee;
+}
+
+.resp-break {
+    display: none;
+}
+
+.break {
+    display: block;
+}
+
+.space {
+    height: 30px;
+    width: 100%;
+    float: left;
+}
+
+.double {
+    height: 60px;
+}
+
+.links {
+    float: left;
+    padding-bottom: 8px;
+}
+
+.sidepanel a.title:hover {
+    background-color: #5865F2;
+}
+
+.invite {
+    background-color: #5865F2;
+    font-weight: 500;
+}
+
+.invite:hover {
+    background-color: #5865F2;
+    box-shadow: 0px 0px 8px 2px rgba(88, 101, 242, .5);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(88, 101, 242, .5);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(88, 101, 242, .5);
+}
+
+
+/* Break Points */
+
+
+/* Extra small-small devices (phones, 420px and down) */
+@media only screen and (max-width: 420px) {
+    .navbar {
+        height: auto;
+    }
+
+    h2 {
+        color: #141617;
+        font-size: 24px;
+    }
+
+    .links {
+        float: none;
+    }
+
+}
+
+
+
+/* Extra small devices (phones, 650px and down) */
+@media (max-width: 900px) {
+    
+    .logo {
+        width: 115px;
+        margin: 0px 0px;
+    }
+
+    .resp-break {
+        display: block;
+        margin: 17px;
+    }
+
+    .main-col {
+        width: 100%;
+    }
+
+
+    .wrapper {
+        display: block;
+        padding: 20px;
+    }
+
+    .sidepanel {
+        width: 100vw;
+        position: fixed;
+        display: none;
+        height: 100vh;
+        margin-top: -75px;
+        margin-left: -20px !important;
+    }
+
+    .right-col {
+        margin-top: 40px;
+        text-align: left;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .collapse {
+        padding: 8px;
+        background-color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        position: fixed;
+        margin: -70px -15px;
+        z-index: 1;
+        display: none;
+    }
+
+    .expand {
+        padding: 8px;
+        background-color: #1D1E21;
+        border-radius: 5px;
+        cursor: pointer;
+        position: fixed;
+        margin: -15px -15px;
+        z-index: 1;
+        display: block;
+    }
+
+    /* .divider,
+    .left {
+        display: none;
+    } */
+
+    .sidepanel a.title {
+        background-color: #0F0F10;
+    }
+
+    nav .openMenu {
+        font-size: 25px;
+        display: none;
+        cursor: pointer;
+        color: #eee;
+    }
+
+    nav .mainMenu .closeMenu,
+    .icons i {
+        font-size: 2rem;
+        display: none;
+        cursor: pointer;
+        color: #eee;
+    }
+}
+
+.codeBlock {
+    background-color: #0F0F10;
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 5px;
+}
+
+.codeBlockCollapse {
+    background-color: #fff;
+    color: #000;
+    padding: 2px 7px;
+    border-radius: 5px;
+}
+
+.cmdCollapse {
+    background-color: #fff !important;
+    color: ;
+}
+
+.cmdCollapse .codeBlock {
+    background-color: #f3f3f3;
+    color: #000;
+}
+
+.container ul li {
+    font-weight: bolder;
+}
+
+.collapsible::after {
+    content: " >";
+    cursor: pointer;
+    border: none;
+    transition: max-height 0.3s ease;
+}
+
+.collapsible.active:after {
+    content: " <";
+    transition: max-height 0.3s ease;
+}
+
+.cmdCollapse {
+    margin: 5px;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: #0F0F10;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.commandBlock {
+    padding-left: 2%;
+    margin-top: 2%;
+    padding: 2px 7px;
+    background-color: #fff;
+    border-radius: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.commandBlock h1 {
+    padding-left: 6%;
+    padding-bottom: 15px;
+}
+
+.commandBlock h2 {
+    padding-left: 6%;
+    padding-bottom: 15px;
+}
+
+.commandBlock p {
+    padding-left: 3%;
+}
+
+.commandBlock div {
+    padding-left: 3%;
+}
+
+.commandBlock li {
+    color: #000
+}
