@@ -12,6 +12,9 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+#blacken {
+    color: #000 !important;
+}
 
 
 /* width */
@@ -301,51 +304,6 @@ body {
         margin-right: 0px;
     }
 
-    .collapse {
-        padding: 8px;
-        background-color: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        position: fixed;
-        margin: -70px -15px;
-        z-index: 1;
-        display: none;
-    }
-
-    .expand {
-        padding: 8px;
-        background-color: #1D1E21;
-        border-radius: 5px;
-        cursor: pointer;
-        position: fixed;
-        margin: -15px -15px;
-        z-index: 1;
-        display: block;
-    }
-
-    /* .divider,
-    .left {
-        display: none;
-    } */
-
-    .sidepanel a.title {
-        background-color: #0F0F10;
-    }
-
-    nav .openMenu {
-        font-size: 25px;
-        display: none;
-        cursor: pointer;
-        color: #eee;
-    }
-
-    nav .mainMenu .closeMenu,
-    .icons i {
-        font-size: 2rem;
-        display: none;
-        cursor: pointer;
-        color: #eee;
-    }
 }
 
 .codeBlock {

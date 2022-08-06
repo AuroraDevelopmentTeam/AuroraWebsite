@@ -93,7 +93,7 @@
         width: 100%;
     }
     .navigation .navbar-collapse {
-        background: #fff;
+        background: #fff !important;
         padding: 20px;
         margin-top: 46px;
         position: absolute;
@@ -103,7 +103,7 @@
     }
     .navigation.navbar-dark .navbar-nav .nav-link {
         padding: 10px 0;
-        color: #000;
+        color: #000 !important;
         padding: 2px 7px;
         border-radius: 15px;
     }
@@ -203,7 +203,7 @@
         margin-top: -45px;
     }
     .navigation .navbar-collapse {
-        background: #fff;
+        background: #fff !important;
         padding: 20px;
         margin-top: 46px;
         position: absolute;
