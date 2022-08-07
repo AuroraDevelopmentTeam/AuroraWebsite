@@ -68,7 +68,7 @@ body {
     padding: 20px;
     overflow-x: hidden;
     position: fixed;
-    height: 75vh;
+    height: 76vh;
     animation: pageShow .3s ease-in-out;
 }
 
@@ -183,7 +183,7 @@ body {
 }
 
 .divider {
-    width: 160px;
+    width: 260px;
     height: 4px;
     background: #5865F2;
     border-radius: 30px;
