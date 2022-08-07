@@ -133,6 +133,11 @@
           <a class="section" href="#information"><i class="fa fa-info-circle" aria-hidden="true"></i> Информация</a>
           <a class="section" href="#moderation"><i class="fa fa-shield" aria-hidden="true"></i> Модерация </a>
           <a class="section" href="#economics"><i class="fa-solid fa-coins"></i> Экономика </a>
+          <a class="section" href="#leveling"><i class="fa-solid fa-dragon"></i> Уровни </a>
+          <a class="section" href="#marriage"><i class="fa fa-heart" aria-hidden="true"></i> Любовь и свадьбы </a>
+          <a class="section" href="#welcomers"><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Приветствия и прощания </a>
+          <a class="section" href="#on_nitro"><i class="fa fa-diamond" aria-hidden="true"></i> Благодарности за нитро буст (alpha) </a>
+          <a class="section" href="#emotions"><i class="fa-solid fa-masks-theater"></i> Эмоции </a>
           <a class="sub-section" href="#nsfwTags">Tags</a>
           <a class="sub-section" href="#autoNSFW">Auto NSFW</a>
           <a class="section" href="#config">Config</a>
@@ -404,6 +409,426 @@
                 <b>Пример :</b> <span class="codeBlock">/shop</span>
                 <br>
                 <b>Примечания :</b> —
+              </div>
+              <li class="collapsible"><span class="codeBlock">/set currency</span>  — Установить символ валюты</li>
+              <div class="cmdCollapse">
+                Устанавливает новый символ валюты на вашем сервере, символом должен быть эмодзи или какой-то текстовый символ, буква, цифра, их набор
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set currency &lt;символ&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set currency 💵</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/set start_balance</span>  — Установить начальный баланс</li>
+              <div class="cmdCollapse">
+                Устанавливает новый стандартный баланс на сервере для новых гостей или при /reset balance /reset economics командах
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set start_balance &lt;деньги&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set start_balance 300</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/set timely_amount</span>  — Установить выплату /timely</li>
+              <div class="cmdCollapse">
+                Устанавливает новое стандартное количество денег, выдаваемое при прописывании /timely на сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set timely_amount &lt;деньги&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set timely_amount 300</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/slots</span>  — Сыграть в слоты</li>
+              <div class="cmdCollapse">
+                Одна из казино игр бота - слоты, если вы проигрываете, то теряете всю ставку, если выигрываете, то ваша ставка умножается на некоторый множитель
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/slots &lt;ставка&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/slots 100</span>
+                <br>
+                <b>Примечания :</b> —
+              </div>
+              <li class="collapsible"><span class="codeBlock">/blackjack</span>  — Сыграть в блэкджек</li>
+              <div class="cmdCollapse">
+                Одна из казино игр бота - блэкджек, если вы проигрываете, то теряете всю ставку, если выигрываете, то получаете бонус в виде поставленной ставки, если получается блэкджек, то x1.5 от поставленной ставки <br> <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D1%8D%D0%BA%D0%B4%D0%B6%D0%B5%D0%BA">Подробнее про блэкджек</a>
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/blackjack &lt;ставка&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/blackjack 100</span>
+                <br>
+                <b>Примечания :</b> —
+              </div>
+              <li class="collapsible"><span class="codeBlock">/gamble</span>  — Сыграть в броски</li>
+              <div class="cmdCollapse">
+                Одна из казино игр бота - броски кубика, если вы проигрываете, то теряете случайный процент ставки, если выигрываете, то получаете случайный процент от ставки, вы и бот бросаете кубики 3 раза и получаете число от 1 до 18
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/gamble &lt;ставка&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/gamble 100</span>
+                <br>
+                <b>Примечания :</b> —
+              </div>
+              <li class="collapsible"><span class="codeBlock">/wheel</span>  — Крутить колесо</li>
+              <div class="cmdCollapse">
+                Одна из казино игр бота - колесо, колесо и множители крутятся, а вы крутите стрелку и получаете один из множителей, назад вы получаете свою ставку, умноженную на полученный множитель
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/wheel &lt;ставка&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/wheel 100</span>
+                <br>
+                <b>Примечания :</b> —
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div id="leveling" style="width:24%; margin:30px 0;"></div>
+        <div class="commandBlock">
+          <h2>Уровни</h2>
+          <div>
+            <ul>
+              <li class="collapsible"><span class="codeBlock">/level</span> — Узнать уровень</li>
+              <div class="cmdCollapse">
+                Отправляет вашу карточку уровня или указанного в параметрах пользователя
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/level [@Пользователь]</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/level @Clonexy2362</span>
+                <br>
+                <b>Примечания :</b> Формула вычисления опыта нужного для следующего уровня: <b>(7 * (уровень**2)) + 58</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/add_exp</span> — Добавить опыт</li>
+              <div class="cmdCollapse">
+                Добавляет указанному пользователю некоторое количество опыта на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/add_exp &lt;@Пользователь&gt; &lt;опыт&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/add_exp @Clonexy2362 100</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/remove_exp</span> — Забрать опыт</li>
+              <div class="cmdCollapse">
+                Убирает у указанного пользователя некоторое количество опыта на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/remove_exp &lt;@Пользователь&gt; &lt;опыт&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/remove_exp @Clonexy2362 100</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/reset_level</span> — Сбросить уровень и опыт</li>
+              <div class="cmdCollapse">
+                Сбрасывает указанному пользователю весь опыт до 0 и уровень до 1, то есть очищает до стартовой точки
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/reset_level &lt;пользователь&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/reset_level @Clonexy2362</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/set level</span> — Установить уровень</li>
+              <div class="cmdCollapse">
+                Устанавливает пользователю указанный в параметрах уровень
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set level &lt;пользователь&gt; &lt;уровень&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set level @Clonexy2362 88</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/set min_max_exp</span> — Установить промежуток опыта</li>
+              <div class="cmdCollapse">
+                Устанавливает на сервере минимальный и максимальный промежутки получаемого опыта за сообщения в чат, опыт будет начисляться между минимальным и максимальным значением случайным образом, значения могут быть равны, если вы не хотите рандомизации
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set min_max_exp &lt;минимальный опыт&gt; &lt;максимальный опыт&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set min_max_exp 20 30</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/set level_up_messages</span> — Вкл/выкл сообщения о повышении уровня</li>
+              <div class="cmdCollapse">
+                Включает или выключает на вашем сервере уведомления о том, что пользователь повысил свой уровень
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set level_up_messages &lt;turn on/turn off&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set level_up_messages &lt;turn on/turn off&gt;</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div id="marriage" style="width:24%; margin:30px 0;"></div>
+        <div class="commandBlock">
+          <h2>Любовь и свадьбы</h2>
+          <div>
+            <ul>
+              <li class="collapsible"><span class="codeBlock">/marry</span> — Отправить запрос на свадьбу</li>
+              <div class="cmdCollapse">
+                Предлагает указанному пользователю вступить с вами в брак
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/marry &lt;@Пользователь&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/marry @Clonexy2362</span>
+                <br>
+                <b>Примечания :</b> успешная свадьба стоит 10000 валюты на сервере
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/loveprofile</span> — Профиль пары</li>
+              <div class="cmdCollapse">
+                Отправляет карточку профиля вашей пары
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/loveprofile</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/loveprofile</span>
+                <br>
+                <b>Примечания :</b> <i class="fa fa-heart" aria-hidden="true"></i> Для использования команды вы должны быть в браке
+              </div>
+              <li class="collapsible"><span class="codeBlock">/lovedescription</span> — Описание профиля пары</li>
+              <div class="cmdCollapse">
+                Устанавливает описание в вашем профиле пары
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/lovedescription &lt;текст&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/lovedescription &lt;текст&gt;</span>
+                <br>
+                <b>Примечания :</b> <i class="fa fa-heart" aria-hidden="true"></i> Для использования команды вы должны быть в браке
+              </div>
+              <li class="collapsible"><span class="codeBlock">/lovedeposit</span> — Положить деньги на семейный счёт</li>
+              <div class="cmdCollapse">
+                Зачисляет деньги с вашего баланса на семейный счёт
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/lovedeposit &lt;деньги&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/lovedeposit &lt;деньги&gt;</span>
+                <br>
+                <b>Примечания :</b> <i class="fa fa-heart" aria-hidden="true"></i> Для использования команды вы должны быть в браке
+              </div>
+              <li class="collapsible"><span class="codeBlock">/divorce</span> — Развод</li>
+              <div class="cmdCollapse">
+                Убирает у указанного пользователя некоторое количество опыта на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/divorce</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/divorce</span>
+                <br>
+                <b>Примечания :</b> <i class="fa fa-heart" aria-hidden="true"></i> Для использования команды вы должны быть в браке
+              </div>
+              <li class="collapsible"><span class="codeBlock">/waifu</span> — Профиль вайфу</li>
+              <div class="cmdCollapse">
+                Отправляет ваш профиль вайфу или указанного пользователя
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/waifu [@Пользователь]</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/waifu @Clonexy2362</span>
+                <br>
+                <b>Примечания :</b> —
+              </div>
+              <li class="collapsible"><span class="codeBlock">/like</span> — Указать пользователя который нравится</li>
+              <div class="cmdCollapse">
+                Устанавливает в ваш вайфу профиль пользователя, который вам нравится
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/like &lt;пользователь&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/like @Clonexy2362 88</span>
+                <br>
+                <b>Примечания :</b>  —
+              </div>
+              <li class="collapsible"><span class="codeBlock">/unlike</span> — Больше никто не нравится</li>
+              <div class="cmdCollapse">
+                Изменяет параметр нравящегося вам пользователя на пустой, то есть сбрасывает
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/unlike</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/unlike</span>
+                <br>
+                <b>Примечания :</b>  —
+              </div>
+              <li class="collapsible"><span class="codeBlock">/gifts</span> — Магазин подарков</li>
+              <div class="cmdCollapse">
+                Отправляет меню магазина подарков
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/gifts</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/gifts</span>
+                <br>
+                <b>Примечания :</b> Магазин подарков фиксирован у бота и возможность его серверно менять не планируется
+              </div>
+              <li class="collapsible"><span class="codeBlock">/gift</span> — Подарить подарок</li>
+              <div class="cmdCollapse">
+                Отправляет меню магазина подарков
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/gift &lt;пользователь&gt; &lt;подарок&gt; &lt;количество&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/gift @Clonexy2362 2. Teddy Bear 🧸 40 </span>
+                <br>
+                <b>Примечания :</b> —
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div id="welcomers" style="width:24%; margin:30px 0;"></div>
+        <div class="commandBlock">
+          <h2>Приветствия и прощания</h2>
+          <div>
+            <ul>
+              <li class="collapsible"><span class="codeBlock">/set welcome_channel</span> — Установить канал приветствий</li>
+              <div class="cmdCollapse">
+                Устанавливает канал для приветствий, в него будут отправляться сообщения - приветствия новых пользователей, посетивших сервер
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set welcome_channel &lt;#Текстовый_Канал&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set welcome_channel #welcome</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/set welcome_message_type</span> — Установить тип приветствий</li>
+              <div class="cmdCollapse">
+                Устанавливает тип приветствий, карточка(card) - изображение с приветствием, эмбед(embed) - настраиваемое текстовое embed сообщение
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set welcome_message_type &lt;card/embed&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set welcome_channel card</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/set welcome_message_state</span> — Включить/отключить приветствия</li>
+              <div class="cmdCollapse">
+                Включает или отключает приветствия новых пользователей на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set welcome_message_state &lt;turn on/turn off&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set welcome_message_state turn on</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/set welcome_embed</span> — Настроить приветственный эмбед</li>
+              <div class="cmdCollapse">
+                Вызывает modal меню настройки приветственного эмбеда, можно указывать следующие параметры в ОПИСАНИИ и ТИТУЛЬНИКЕ эмбеда: {member.mention}, {member.created_at}, {member.name}, {guild.name}, {guild.members}
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set welcome_embed</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set welcome_embed</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/set goodbye_channel</span> — Установить канал прощаний</li>
+              <div class="cmdCollapse">
+                Устанавливает канал для прощаний, в него будут отправляться сообщения - прощания с пользователями, покинувшими сервер
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set goodbye_channel &lt;#Текстовый_Канал&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set goodbye_channel #bye-bye</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/set goodbye_message_type</span> — Установить тип прощаний</li>
+              <div class="cmdCollapse">
+                Устанавливает тип прощаний, карточка(card) - изображение с приветствием, эмбед(embed) - настраиваемое текстовое embed сообщение
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set goodbye_message_type &lt;card/embed&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set goodbye_channel card</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/set goodbye_message_state</span> — Включить/отключить приветствия</li>
+              <div class="cmdCollapse">
+                Включает или отключает прощания с пользователями на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set goodbye_message_state &lt;turn on/turn off&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set goodbye_message_state turn on</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/set goodbye_embed</span> — Настроить прощальный эмбед</li>
+              <div class="cmdCollapse">
+                Вызывает modal меню настройки прощального эмбеда, можно указывать следующие параметры в ОПИСАНИИ и ТИТУЛЬНИКЕ эмбеда: {member.mention}, {member.created_at}, {member.name}, {guild.name}, {guild.members}
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set goodbye_embed</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set goodbye_embed</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div id="on_nitro" style="width:24%; margin:30px 0;"></div>
+        <div class="commandBlock">
+          <h2>Благодарности за Нитро буст (alpha, не тестировано, нужны тестировщики)</h2>
+          <div>
+            <ul>
+              <li class="collapsible"><span class="codeBlock">/set nitro_channel</span> — Установить канал Благодарности за нитро буст</li>
+              <div class="cmdCollapse">
+                Устанавливает канал для Благодарностей за буст, в него будут отправляться сообщения для забустивших сервер
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set nitro_channel &lt;#Текстовый_Канал&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set nitro_channel #спасибочки</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/set nitro_embed</span> — Установить нитро сообщение</li>
+              <div class="cmdCollapse">
+                Вызывает modal меню настройки эмбеда благодарности за буст, можно указывать следующие параметры в ОПИСАНИИ и ТИТУЛЬНИКЕ эмбеда: {member.mention}, {member.created_at}, {member.name}, {guild.name}, {guild.members}
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set nitro_embed</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set nitro_embed</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/set nitro_messages_state</span> — Включить/отключить благодарности за буст</li>
+              <div class="cmdCollapse">
+                Включает или отключает благодарности за нитро буст на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set nitro_messages_state &lt;turn on/turn off&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set nitro_messages_state turn on</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div id="emotions" style="width:24%; margin:30px 0;"></div>
+        <div class="commandBlock">
+          <h2>Эмоции</h2>
+          <div>
+            <ul>
+              <li class="collapsible"><span class="codeBlock">/emotion kiss</span> — Поцеловать пользователя</li>
+              <div class="cmdCollapse">
+                Отправляет эмоцию - поцелуй с упоминанием указанного пользователя, также дополнительно может быть добавлено сообщение
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/emotion kiss &lt;@Пользователь&gt; [сообщение]</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/emotion kiss @Clonexy2362 Цмок тебя! </span>
+                <br>
+                <b>Примечания :</b> —
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/set nitro_embed</span> — Установить нитро сообщение</li>
+              <div class="cmdCollapse">
+                Вызывает modal меню настройки эмбеда благодарности за буст, можно указывать следующие параметры в ОПИСАНИИ и ТИТУЛЬНИКЕ эмбеда: {member.mention}, {member.created_at}, {member.name}, {guild.name}, {guild.members}
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set nitro_embed</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set nitro_embed</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/set nitro_messages_state</span> — Включить/отключить благодарности за буст</li>
+              <div class="cmdCollapse">
+                Включает или отключает благодарности за нитро буст на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/set nitro_messages_state &lt;turn on/turn off&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/set nitro_messages_state turn on</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
               </div>
             </ul>
           </div>
