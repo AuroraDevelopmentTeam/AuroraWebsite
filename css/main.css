@@ -323,6 +323,7 @@ button {
      background-size: 100% 100%;
      background-repeat: repeat;
      background-position: center;
+     margin-bottom: 50px;
 }
 
 .header {
@@ -982,4 +983,8 @@ nav.nav-w {
      width: 300%;
      height: 300%;
      size: 30  rem;
+}
+
+#fix {
+     padding-top: 30px;
 }

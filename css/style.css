@@ -869,6 +869,10 @@ nav.nav-w {
   z-index: 5;
 }
 
+.single-feature p {
+     color: #000;
+   }
+
 .shape-right {
   position: absolute;
   top: -40px;
@@ -888,6 +892,9 @@ nav.nav-w {
  {
     display: none;
   }
+  .commandBlock {
+     width: 85%;
+ }
 }
 
 .shape-left {
@@ -908,10 +915,9 @@ nav.nav-w {
   .shape-left {
     display: none;
   }
-}
-
-#subtitle {
-     padding-top: 11%;
+  .commandBlock {
+     width: 85%;
+ }
 }
 
 .loader {
@@ -922,3 +928,31 @@ nav.nav-w {
      height: 300%;
      size: 30  rem;
 }
+
+.commandBlock {
+     padding-left: 4%;
+     padding: 2px 7px;
+     background-color: #fff;
+     border-radius: 40px;
+     width: 35%;
+     position: relative;
+     z-index: 5;
+     margin-top: 10%
+ }
+
+ .commandBlock h1 {
+     padding-left: 6%;
+     padding-bottom: 15px;
+ }
+ 
+ .commandBlock h4 {
+     padding-left: 3%;
+ }
+ 
+ .commandBlock p {
+     padding-left: 3%;
+ }
+ 
+ .commandBlock div {
+     padding-left: 3%;
+ }

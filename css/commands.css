@@ -63,13 +63,14 @@ body {
     padding: 2px 7px;
     background-color: #fff;
     border-radius: 40px;
-    margin-top: 40px;
-    width: 300px;
+    margin-bottom: 10vh;
+    width: 350px;
     padding: 20px;
-    overflow-x: hidden;
+    overflow-x: auto;
     position: fixed;
-    height: 76vh;
+    height: 68vh;
     animation: pageShow .3s ease-in-out;
+    z-index: 100;
 }
 
 .sidepanel::-webkit-scrollbar {
@@ -86,7 +87,7 @@ body {
     background-color: #1D1E21;
     text-decoration: none;
     margin-bottom: 15px;
-    font-size: 15px;
+    font-size: 22px;
     font-weight: 600;
     padding: 4px 10px;
     border-radius: 5px;
@@ -94,7 +95,7 @@ body {
 }
 
 .sidepanel a.section {
-    font-size: 17px;
+    font-size: 20px;
     text-align: left;
     line-height: 30px;
     display: block;
@@ -107,7 +108,7 @@ body {
 }
 
 .sidepanel a.sub-section {
-    font-size: 16px;
+    font-size: 20px;
     text-align: left;
     line-height: 30px;
     display: block;
@@ -128,10 +129,9 @@ body {
 }
 
 .right-col {
-    margin-top: 20px;
     text-align: left;
     width: 100%;
-    margin-left: 340px;
+    margin-left: 440px;
     margin-right: 40px;
 }
 
