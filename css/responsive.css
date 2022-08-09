@@ -142,6 +142,9 @@
     .commandBlock {
         width: 85%;
     }
+    .navbar {
+        position: fixed;
+    }
 }
 
 @media (max-width: 575px) {
@@ -255,6 +258,9 @@
     }
     .commandBlock {
         width: 85%;
+    }
+    .navbar {
+        position: fixed;
     }
 }
 

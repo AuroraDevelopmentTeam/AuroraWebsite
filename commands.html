@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commands</title>
-    <link rel="stylesheet" href="css/commands.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/head.css"
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/main.css"
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link
@@ -29,8 +29,12 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/head.css"
       <link rel="stylesheet" href="css/loading.css">
       <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/commands.css"
       <!-- style css -->
       <!-- Responsive-->
       <!-- Scrollbar Custom CSS -->
@@ -59,52 +63,72 @@
 
 
 <div id="page">
-  <header>
-    <!-- header inner -->
-    <div  class="head_top">
-       <div class="header">
-          <div class="container-fluid">
-             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                   <div class="full">
-                      <div class="center-desk">
-                         <div class="logo">
-                            <a href="index.html"><img src="images/logo.png" alt="#" /></a>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                   <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarsExample04">
-                        <ul class="navbar-nav mr-auto">
-                           <li class="nav-item">
-                              <a class="nav-link" href="index.html"> Домой  </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="commands.html"> Команды  </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="https://discord.gg/5j9hmZw6yY">Поддержка</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="#">Документация</a>
-                           </li>
-                        </ul>
-                     </div>
-                   </nav>
-                </div>
-             </div>
+      <!-- header -->
+      <a id="backtotop" data-tippy-content="Back To Top.">
+        <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
+      </a>
+      <!-- Back To Top End -->
+  
+      <!-- Navbar Start -->
+      <nav
+        class="navbar is-fixed-top"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="navbar-brand mt-2 mb-2">
+          <a class="navbar-item" href="index.html">
+            <strong>Aurora</strong>
+  
+            <!-- or if you want to use image -->
+            <!-- <img
+              src="image link or path"
+              width="112"
+              height="28"
+            /> -->
+          </a>
+          <!--<a
+            role="button"
+            class="navbar-burger has-text-white"
+            data-target="navMenu"
+            aria-label="menu"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>-->
+        </div>
+  
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="index.html" class="navbar-item is-tab">
+              Домой
+            </a>
+  
+            <a href="commands.html" class="navbar-item is-tab">
+              Команды
+            </a>
+  
+            <a href="#stats" class="navbar-item is-tab">
+              Поддержка
+            </a>
+  
+            <a href="#" class="navbar-item is-tab">
+              Документация
+            </a>
           </div>
-       </div>
-       <!-- end header inner -->
-       <!-- end header -->
-       <!-- banner -->
-    </div>
- </header>
+  
+          <div class="navbar-end">
+            <a href="#" class="navbar-item is-tab" target="_blank">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+  
+            <a href="#" class="navbar-item is-tab" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
 
 
  
