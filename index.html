@@ -411,7 +411,7 @@
 
       <div class="columns mt-6">
         <div class="column has-text-centered">
-          <p class="title has-text-weight-bold lined">9</p>
+          <p class="title has-text-weight-bold lined">8</p>
           <span class="subtitle has-text-weight-bold blurple"><i class="fa fa-server"></i> Серверов</span>
         </div>
 
@@ -421,7 +421,7 @@
         </div>
 
         <div class="column has-text-centered">
-          <p class="title has-text-weight-bold lined">47</p>
+          <p class="title has-text-weight-bold lined">176</p>
           <span class="subtitle has-text-weight-bold blurple"><i class="fa fa-users"></i> Пользователей</span>
         </div>
       </div>
@@ -512,6 +512,16 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+        $.get('https://stackoverflow.com/questions').then(function (html) {
+        // Success response
+        var $mainbar = $(html).find('#mainbar');
+        console.log('ok')
+        }, function () {
+        // Error response
+        console.log('Access denied');
+        });
+      </script>
    </body>
 </html>
 
