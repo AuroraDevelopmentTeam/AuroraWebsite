@@ -492,6 +492,76 @@
                 <br>
                 <b>Примечания :</b> —
               </div>
+              <li class="collapsible"><span class="codeBlock">/duel</span>  — Начать дуэль</li>
+              <div class="cmdCollapse">
+                Одна из казино игр бота -дуэль, вы стартуете дуэль со ставкой, кто-то её принимает и победитель получает ставку, а проигравший платит
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/duel &lt;ставка&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/duel 100</span>
+                <br>
+                <b>Примечания :</b> —
+              </div>
+              <li class="collapsible"><span class="codeBlock">/income channel</span>  — Отключить/Включить доход в канале</li>
+              <div class="cmdCollapse">
+                Отключает или включает возможность зарабатывать валюту сервера в указанном текстовом канале сервера, с помощью параметров True/False(включеено выключено)
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/income channel &lt;#Текстовый_Канал&gt; &lt;True/False&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/income channel #флуд False</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/income min_max_message</span>  —  Настроить доход за написание сообщений</li>
+              <div class="cmdCollapse">
+                Настраивает минимальный и максимальный доход, который пользователь получает за написание сообщений в неотключенных от системы доходов каналах
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/income min_max_message &lt;минимальное_количество&gt; &lt;максимальное_количество&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/income min_max_message 3 6</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/income min_max_voice</span>  —  Настроить доход за написание сообщений</li>
+              <div class="cmdCollapse">
+                Настраивает минимальный и максимальный доход, который пользователь получает за нахождение в голосовом канале, внимание, расчёт валюты происходит после выхода пользователя из голосового чата, как и начисление ему времени за нахождение
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/income min_max_voice &lt;минимальное_количество&gt; &lt;максимальное_количество&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/income min_max_voice 3 6</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/income messages_per_income</span>  —  Настроить кол-во сообщений для выдачи дохода</li>
+              <div class="cmdCollapse">
+                Настраивает количество сообщений необходимое пользователю написать для получения дохода за написание сообщений
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/income messages_per_income &lt;число сообщений&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/income messages_per_income 5</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/income role_add</span>  —  Добавить выдачу раз в 12 часов валюты роли</li>
+              <div class="cmdCollapse">
+                Настраивает систему доходов раз в 12 часов для указанной роли с указанным количеством дохода
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/income role_add &lt;@Роль&gt; &lt;доход&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/income role_add @VIP 200</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/income role_remove</span>  —  Убрать выдачу раз в 12 часов валюты роли</li>
+              <div class="cmdCollapse">
+                Настраивает систему доходов раз в 12 часов для указанной роли с указанным количеством дохода
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/income role_add &lt;@Роль&gt; &lt;доход&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/income role_remove @VIP</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
             </ul>
           </div>
         </div>
@@ -1101,6 +1171,16 @@
                 <b>Пример :</b> <span class="codeBlock">/profile description Классное новое описание, привет!</span>
                 <br>
                 <b>Примечания :</b> Описание должно быть не более 140 символов
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/profile badges</span> — Отобразить достижения значков профиля</li>
+              <div class="cmdCollapse">
+                Устанавливает в профиль новое описание
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/profile badges</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/profile badges</span>
+                <br>
+                <b>Примечания :</b> —
               </span></div>
             </ul>
           </div>
