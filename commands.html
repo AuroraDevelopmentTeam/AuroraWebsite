@@ -161,7 +161,7 @@
       <div id="information" style="width:24%; margin:30px 0;"></div>
       
         <div class="commandBlock">
-          <h1>Команлы</h1>
+          <h1>Команды</h1>
           <div>Синтаксис:
             <ul>
               <li><span class="codeBlock">< ></span> : Обязательный аргумент</li>
@@ -1219,23 +1219,83 @@
           <h2>Автороли</h2>
           <div>
             <ul>
-              <li class="collapsible"><span class="codeBlock">/set autorole</span> — Установить автороль на входе</li>
+              <li class="collapsible"><span class="codeBlock">/autorole on_enter</span> — Установить автороль на входе</li>
               <div class="cmdCollapse">
                 Устанавливает автороль на вашем сервере для новых пользователей, которые получат её автоматически, присоединившись на сервер
                 <br>
-                <b>Использование :</b> <span class="codeBlock">/set autorole &lt;@Роль&gt;</span>
+                <b>Использование :</b> <span class="codeBlock">/autorole on_enter &lt;@Роль&gt;</span>
                 <br>
-                <b>Пример :</b> <span class="codeBlock">/set autorole @новичок</span>
+                <b>Пример :</b> <span class="codeBlock">/autorole on_enter @новичок</span>
                 <br>
                 <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
               </span></div>
-              <li class="collapsible"><span class="codeBlock">/set autoroles_state</span> — Включает/выключает автороли</li>
+              <li class="collapsible"><span class="codeBlock">/autorole enable</span> — Включает/выключает автороли</li>
               <div class="cmdCollapse">
                 Включает/выключает систему выдачи авторолей на вашем сервере
                 <br>
-                <b>Использование :</b> <span class="codeBlock">/set autoroles_state &lt;turn on/turn off&gt;</span>
+                <b>Использование :</b> <span class="codeBlock">/autorole enable &lt;turn on/turn off&gt;</span>
                 <br>
-                <b>Пример :</b> <span class="codeBlock">/set autoroles_state turn on</span>
+                <b>Пример :</b> <span class="codeBlock">/autorole enable turn on</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/autorole add_for_level</span> — Добавить автороль за уровень</li>
+              <div class="cmdCollapse">
+                Добавляет в базу данных запись для проверки при повышении уровня о том, что на указанном уровне необходимо автоматически выдать указанную роль
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/autorole add_for_level &lt;@Рольf&gt; &lt;Уровеньf&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/autorole add_for_level @Уровень5 5</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/autorole remove_for_level</span> — Убрать автороль за уровень</li>
+              <div class="cmdCollapse">
+                Убирает автоматическую выдачу роли указанной за данный уровень
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/autorole remove_for_level &lt;уровень&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/autorole remove_for_level 5</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/autorole display_for_level</span> — Показать все автороли за уровень</li>
+              <div class="cmdCollapse">
+                Отправляет список всех авторолей за уровень
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/autorole display_for_level</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/autorole display_for_level</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/autorole add_on_reaction</span> — Добавить автороль за реакцию на сообщение</li>
+              <div class="cmdCollapse">
+                Добавляет в базу данных запись для проверки при нажатии на указанное сообщение(проверяется по ID) в указанном канале на указанное в ходе исполнения команды(при её выполнении будет предложено далее прикрепить эмодзи к сообщению) эмодзи - выдать указанную роль
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/autorole add_on_reaction &lt;канал&gt; &lt;ID сообщения&gt; &lt;@Роль&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/autorole add_on_reaction #роли 1010570727612751882 @verified</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/autorole remove_on_reaction</span> — Убрать автороль за реакцию на сообщение</li>
+              <div class="cmdCollapse">
+                Убирает указанную автороль за реакцию на сообщение
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/autorole remove_on_reaction &lt;@Роль&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/autorole remove_on_reaction @666</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/autorole display_on_reaction</span> — Показать все автороли за реакции на сообщение</li>
+              <div class="cmdCollapse">
+                Отправляет список авторолей за реакции на сообщение
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/autorole display_on_reaction</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/autorole display_on_reaction</span>
                 <br>
                 <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
               </span></div>
