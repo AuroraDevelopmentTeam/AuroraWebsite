@@ -34,3 +34,20 @@
  ::-webkit-scrollbar-thumb:hover {
      background: #202225 !important;
  }
+
+ #tos {
+    margin-left: 440px;
+    margin-right: 440px;
+    margin-top: 150px;
+ }
+
+ #tos p {
+    margin-top: 20px;
+ }
+
+ #tos h1 {
+    line-height: 28px;
+    color: #000;
+    font-size: 24px;
+    margin-top: 40px;
+ }
