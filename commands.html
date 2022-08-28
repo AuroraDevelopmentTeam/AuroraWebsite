@@ -141,6 +141,7 @@
 
           <a class="section" href="#information"><i class="fa fa-info-circle" aria-hidden="true"></i> Информация</a>
           <a class="section" href="#moderation"><i class="fa fa-shield" aria-hidden="true"></i> Модерация </a>
+          <a class="section" href="#automod"><i class="fa fa-lock" aria-hidden="true"></i> Автомодерация </a>
           <a class="section" href="#economics"><i class="fa-solid fa-coins"></i> Экономика </a>
           <a class="section" href="#leveling"><i class="fa-solid fa-dragon"></i> Уровни </a>
           <a class="section" href="#marriage"><i class="fa fa-heart" aria-hidden="true"></i> Любовь и свадьбы </a>
@@ -154,6 +155,7 @@
           <a class="section" href="#profiles"><i class="fa fa-user" aria-hidden="true"></i> Профили </a>
           <a class="section" href="#stats"><i class="fa fa-bar-chart" aria-hidden="true"></i> Статистика </a>
           <a class="section" href="#autoroles"><i class="fa fa-cog" aria-hidden="true"></i> Автороли </a>
+          <a class="section" href="#funny"><i class="fa fa-smile-o" aria-hidden="true"></i> Развлечения </a>
       </div>
 
       <div class="right-col">
@@ -314,6 +316,134 @@
                 <b>Пример :</b><br> <span class="codeBlock">/edit_warn 880055535 Новая причина предупреждения</span>
                 <br>
                 <b>Примечания :</b> <i class="fa fa-shield" aria-hidden="true"></i> Для использования команды нужны модераторские права: <b>manage_messages</b> (возможность удалять сообщения)
+              </span></div>
+            </ul>
+          </div>
+        </div>
+        <div id="automod" style="width:24%; margin:30px 0;"></div>
+        <div class="commandBlock">
+          <h2>Автомодерация</h2>
+          <div>
+            <ul>
+              <li class="collapsible"><span class="codeBlock">/automod setup</span> — Устанавливает полную систему автомодерации без ограничений на сервере. Работает только для серверов - сообществ с community типом модерации</li>
+              <div class="cmdCollapse">
+                Устанавливает полную систему автомодерации без ограничений на сервере. У вас должен быть включен Community тип модерации в /automod moderation_mode, а таккже сообщество на самом сервере и автомодерация на самом сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod setup</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod setup</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/automod word_add</span> — Добавляет новое запрещённое слово для автомодерации</li>
+              <div class="cmdCollapse">
+                Добавляет новое запрещённое на сервере слово. Работает независимо от типа модерации для обоих типов
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod word_add &lt;Слово&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod word_add негр</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/automod word_remove</span>  — Удаляет слово из автомодерации</li>
+              <div class="cmdCollapse">
+                Удаляет запрещённое слово из списка
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod word_remove &lt;Слово&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod word_remove негр</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/automod exempt_role_add</span>  — Работает только для серверов - сообществ с community типом модерации. Добавляет исключение для данной роли, пользователям с этой ролью можно будет нарушать правила автомодерации.</li>
+              <div class="cmdCollapse">
+                Команда работает только для серверов-сообществ с соответствующими типами модерации
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod exempt_role_add &lt;@Роль&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod exempt_role_add @Модератор</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </div>
+              <li class="collapsible"><span class="codeBlock">/automod exempt_role_remove</span> — Убирает исключение для данной роли</li>
+              <div class="cmdCollapse">
+                Команда работает только для серверов-сообществ с соответствующими типами модерации
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod exempt_role_remove &lt;@Роль&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod exempt_role_remove @Модератор</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/automod exempt_channel_add</span> — Работает только для серверов - сообществ с community типом модерации. Добавляет исключение для данного канала, в нём можно будет нарушать правила автомодерации</li>
+              <div class="cmdCollapse">
+                Команда работает только для серверов-сообществ с соответствующими типами модерации
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod exempt_channel_add &lt;#Канал&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod exempt_channel_add #токсичный_чат</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/automod exempt_channel_remove</span> — Убирает исключение для канала</li>
+              <div class="cmdCollapse">
+                Команда работает только для серверов-сообществ с соответствующими типами модерации
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod exempt_channel_remove &lt;#Канал&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod exempt_channel_remove #токсичный_чат</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/automod nickname_detect</span> — Включает/Отключает поиск запрещённых слов в никнеймах</li>
+              <div class="cmdCollapse">
+                True - включить, False - выключить поиск запрещённых слов добавленных через /automod word_add в никнеймах пользователей, пишущих и заходящих на сервер, нарушители будут кикнуты с сервера и уведомлены в личные сообшения о нарушении и необходимости изменить статус активности
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod nickname_detect &lt;True/False&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod nickname_detect True</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/automod description_detect</span> — Включает/Отключает поиск запрещённых слов в статусах активности</li>
+              <div class="cmdCollapse">
+                True - включить, False - выключить поиск запрещённых слов добавленных через /automod word_add в описании статусов активности пользователей, пишущих и заходящих на сервер, нарушители будут кикнуты с сервера и уведомлены в личные сообшения о нарушении и необходимости изменить статус активности
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod description_detect &lt;True/False&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod description_detect True</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/automod link_detect</span> — Включает/Отключает блокировку ссылок</li>
+              <div class="cmdCollapse">
+                Включает/выключает возможность отправлять ссылки и приглашения на вашем сервере
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod link_detect &lt;True/False&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod link_detect True</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/automod enable</span> — Включает/Отключает автомодерацию</li>
+              <div class="cmdCollapse">
+                Включает/Выключает всю автомодерацию
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod enable &lt;True/False&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod enable True</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/automod moderation_mode</span> — Изменяет вид модерации на сервере</li>
+              <div class="cmdCollapse">
+                Community - тип модерации подходит для модерации на серверах - сообществах, Friends_group - для маленьких серверов не сообществ, состоящих из группы друзей
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/automod moderation_mode &lt;community/friends_group&gt;</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/automod enable True</span>
+                <br>
+                <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
               </span></div>
             </ul>
           </div>
@@ -1001,7 +1131,7 @@
           <h2>Тикеты</h2>
           <div>
             <ul>
-              <li class="collapsible"><span class="codeBlock">/setup_tickets</span> — Установить канал Благодарности за нитро буст</li>
+              <li class="collapsible"><span class="codeBlock">/setup_tickets</span> — Установить систему тикетов на сервере</li>
               <div class="cmdCollapse">
                 Устанавливает в канал систему тикетов на сервере, отправит в данный канал сообщение для создания тикетов независимо от параметра, при указании параметра auto - создаст категорию для тикетов, в которую они будут добавляться и запомнит эту категорию, также создаст такую же категорию - архив, для тикетов, которые уже были закрыты, при указании параметра self - не будет создавать категорию для тикетов и архива и будет ждать, когда пользователь установит их командами самостоятельно
                 <br>
@@ -1299,6 +1429,94 @@
                 <br>
                 <b>Примечания :</b> <i class="fa-solid fa-crown"></i> Для использования команды нужны администраторские права: <b>administrator</b>
               </span></div>
+            </ul>
+          </div>
+        </div>
+        <div id="funny" style="width:24%; margin:30px 0;"></div>
+        <div class="commandBlock">
+          <h2>Развлечения</h2>
+          <div>
+            <ul>
+              <li class="collapsible"><span class="codeBlock">/brick_knife_evidence_yandere</span> —  Игра: Кирпич Нож Компромат Яндере Тентакли</li>
+              <div class="cmdCollapse">
+                Уникальная игра по типу ножниц и бумаги, только в аниме - тематике
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/brick_knife_evidence_yandere</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/brick_knife_evidence_yandere</span>
+                <br>
+                <b>Примечания :</b> —
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/ball</span> — Шар предсказаний</li>
+              <div class="cmdCollapse">
+                Отвечает с помощью Шара предсказаний на заданный вами вопрос
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/ball</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/ball</span>
+                <br>
+                <b>Примечания :</b> —
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/coin</span> — Подбросить монетку</li>
+              <div class="cmdCollapse">
+                Подбрасывает монетку и выпадает орёл/решка
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/coin</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/coin</span>
+                <br>
+                <b>Примечания :</b> —
+              </span></div>
+              <li class="collapsible"><span class="codeBlock">/cat</span> — Случайное изображение котика</li>
+              <div class="cmdCollapse">
+                Работает с Some Random Api, через метод GET к указанному endpoint изображения животного, после отправляет полученную в виде json url ссылку, уже завёрнутую в дискордовский embed формат
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/cat</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/cat</span>
+                <br>
+                <b>Примечания :</b> — 
+              </div>
+              <li class="collapsible"><span class="codeBlock">/dog</span> — Случайное изображение собаки</li>
+              <div class="cmdCollapse">
+                Работает с Some Random Api, через метод GET к указанному endpoint изображения животного, после отправляет полученную в виде json url ссылку, уже завёрнутую в дискордовский embed формат
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/dog</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/dog</span>
+                <br>
+                <b>Примечания :</b> — 
+              </div>
+              <li class="collapsible"><span class="codeBlock">/fox</span> — Случайное изображение лисы</li>
+              <div class="cmdCollapse">
+                Работает с Some Random Api, через метод GET к указанному endpoint изображения животного, после отправляет полученную в виде json url ссылку, уже завёрнутую в дискордовский embed формат
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/fox</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/fox</span>
+                <br>
+                <b>Примечания :</b> — 
+              </div>
+              <li class="collapsible"><span class="codeBlock">/panda</span> — Случайное изображение панды</li>
+              <div class="cmdCollapse">
+                Работает с Some Random Api, через метод GET к указанному endpoint изображения животного, после отправляет полученную в виде json url ссылку, уже завёрнутую в дискордовский embed формат
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/panda</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/panda</span>
+                <br>
+                <b>Примечания :</b> — 
+              </div>
+              <li class="collapsible"><span class="codeBlock">/red_panda</span> — Случайное изображение красной панды</li>
+              <div class="cmdCollapse">
+                Работает с Some Random Api, через метод GET к указанному endpoint изображения животного, после отправляет полученную в виде json url ссылку, уже завёрнутую в дискордовский embed формат
+                <br>
+                <b>Использование :</b> <span class="codeBlock">/red_panda</span>
+                <br>
+                <b>Пример :</b> <span class="codeBlock">/red_panda</span>
+                <br>
+                <b>Примечания :</b> — 
+              </div>
             </ul>
           </div>
         </div>
